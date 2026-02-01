@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>WWSIS</groupId>
+    <artifactId>Microblog</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <!-- Java -->
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hibernate.version>5.2.10.Final</hibernate.version> 
+        <spring.version>4.3.8.RELEASE</spring.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- Spark 2.7.2 – mikro framework do tworzenia aplikacji webowych -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.7.2</version>
+        </dependency>
+
+        <!-- Spark Freemarker 2.7.1 – biblioteka do integracji Spark i Freemarkera -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-template-freemarker</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+
+        <!-- Freemarker 2.3.28 – biblioteka do generacji widoku w aplikacji web opartego o HTML -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.28</version>
+        </dependency>
+
+        <!-- Spring 4.3.8 – framework będący szkieletem spinającym aplikację zgodne z Java EE -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.8.RELEASE</version>
+        </dependency>
+
+        <!-- HSQLDB 2.4.1 – prosta relacyjna baza danych zgodna ze standardem SQL -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
+        <!-- DBCP 2.1.1 – biblioteka do obsługi puli połączeń do bazy danych -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
+        <!-- jBCrypt 0.4 – biblioteka do obsługi haseł i kryptografii -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+
+        <!-- Commons Bean Utils 1.9.2 – biblioteka do zasilania danymi obiektów typu POJO z mapy danych z requesta HTTP -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+        
+        <!-- Hibernate Core 5.2.10 --> 
+        <dependency> 
+        	<groupId>org.hibernate</groupId> 
+        	<artifactId>hibernate-core</artifactId> 
+        	<version>${hibernate.version}</version> 
+        </dependency> 
+        
+        <!-- Hibernate Entity Manager --> 
+        <dependency> 
+        	<groupId>org.hibernate</groupId> 
+        	<artifactId>hibernate-entitymanager</artifactId> 
+        	<version>${hibernate.version}</version> 
+        </dependency> 
+        
+        <!-- Spring ORM --> 
+        <dependency> 
+        	<groupId>org.springframework</groupId> 
+        	<artifactId>spring-context</artifactId> 
+        	<version>${spring.version}</version> 
+        </dependency> 
+        
+        <!-- Spring Web MVC --> 
+        <dependency> 
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-webmvc</artifactId> 
+        	<version>${spring.version}</version> 
+        </dependency>
+
+    </dependencies>
+
+</project>
