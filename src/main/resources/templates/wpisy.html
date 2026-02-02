@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wpis</title>
+</head>
+<body>
+
+<h1>Strona wpis</h1>
+
+<p th:text="${tekst}">Tutaj będzie tekst z kontrolera</p>
+
+<form th:action="@{/wpisy/dodaj}" method="post">
+    <input type="text" name="tresc" placeholder="Treść wpisu" required>
+    <button type="submit">Dodaj</button>
+</form>
+
+<ul>
+    <ul>
+  <li th:each="w : ${wpisy}">
+    <span th:text="${w.tresc}"></span>
+
+    <form th:action="@{/wpisy/usun}" method="post" style="display:inline;">
+      <input type="hidden" name="id" th:value="${w.id}">
+      <button type="submit">Usuń</button>
+    </form>
+  </li>
+</ul>
+
+</ul>
+
+
+</body>
+</html>

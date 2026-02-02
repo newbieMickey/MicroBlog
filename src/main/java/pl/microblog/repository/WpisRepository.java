@@ -1,9 +1,7 @@
 package pl.microblog.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import pl.microblog.model.Wpis;
-import java.util.List;
 
-public interface WpisRepository {
-    void save(Wpis wpis);
-    List<Wpis> findAll();
+public interface WpisRepository extends JpaRepository<Wpis, Long> {
 }

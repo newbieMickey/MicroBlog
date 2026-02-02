@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import pl.microblog.model.Uzytkownik;
 import pl.microblog.service.UzytkownikService;
 
-@Controller
+//@Controller
 public class UzytkownikController {
 
     @Autowired

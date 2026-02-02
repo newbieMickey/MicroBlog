@@ -17,10 +17,18 @@ public class UzytkownikServiceImpl implements UzytkownikService {
     @Override
     public void zarejestruj(Uzytkownik u) {
         uzytkownikRepository.save(u);
+        //@Override
+        //public void usun(Long id) {
+           // wpisRepository.deleteById(id);
+        //}
     }
 
     @Override
     public Uzytkownik znajdzPoLoginie(String login) {
-        return uzytkownikRepository.findByLogin(login);
+        return uzytkownikRepository.findByLogin(login).orElse(null);
     }
+
+    
+   
+
 }
